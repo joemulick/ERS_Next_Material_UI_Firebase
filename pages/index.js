@@ -3,16 +3,32 @@ import Page from '../layouts/main'
 export default () => (
   <Page>
     <div className="centered">
-      <p>Home page with global styles!</p>
+      <div className="indexLoginContainer">
+        <div className="buttonFrame">
+            <div>Login</div>
+        </div>
+      </div>
     </div>
     <style jsx>{`
 
+    .buttonFrame{
+      width: 200px;
+      height: 50px;
+      background-color:#908987;
+      margin: 20px auto;
+      padding-top:20px;
+    }
+
     .centered {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      /* bring your own prefixes */
-      transform: translate(-50%, -50%);
+      margin: 10vh;
+    }
+
+    .indexLoginContainer {
+      min-height: 580px;
+      width: 400px;
+      background-color:#eee;
+      padding-top:25px;
+      margin: auto;
     }
 
     `}</style>
