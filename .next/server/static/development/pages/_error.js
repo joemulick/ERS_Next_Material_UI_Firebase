@@ -112,7 +112,7 @@ module.exports = __webpack_require__(/*! next/error */ "next/error")
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\joemu\Desktop\Coding\Astrology_Website\Version_1_NextJS\Astrology_Main\astro_v1\node_modules\next\dist\pages\_error.js */"./node_modules/next/dist/pages/_error.js");
+module.exports = __webpack_require__(/*! C:\Users\joemu\Desktop\Coding\ERS_Next_MaterialUI_Firebase\Master_Repo\ERS_Next_Material_UI_Firebase\node_modules\next\dist\pages\_error.js */"./node_modules/next/dist/pages/_error.js");
 
 
 /***/ }),
