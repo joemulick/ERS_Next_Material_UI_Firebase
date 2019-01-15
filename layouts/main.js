@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
-import ButtonAppBar from './ButtonAppBar'
-import Footer from './Footer'
+import DefaultLayout from './DefaultLayout'
 
 export default ({children}) => (
   <div>
@@ -364,10 +363,6 @@ export default ({children}) => (
         display: none;
       }
     `}</style>
-
-    <ButtonAppBar />
         {children}
-    <Footer />   
-    
   </div>
 )
