@@ -1,36 +1,74 @@
-import Page from '../layouts/main'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogActions from '@material-ui/core/DialogActions';
+import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
+import Link from 'next/link';
 
-export default () => (
-  <Page>
-    <div className="centered">
-      <div className="indexLoginContainer">
-        <div className="buttonFrame">
-            <div>Login</div>
-        </div>
+const styles = theme => ({
+  root: {
+    textAlign: 'center',
+    paddingTop: theme.spacing.unit * 20,
+  },
+});
+
+class Index extends React.Component {
+  state = {
+    open: false,
+  };
+
+  handleClose = () => {
+    this.setState({
+      open: false,
+    });
+  };
+
+  handleClick = () => {
+    this.setState({
+      open: true,
+    });
+  };
+
+  render() {
+    const { classes } = this.props;
+    // const { open } = this.state;
+
+    return (
+      <div className={classes.root}>
+        {/* <Dialog open={open} onClose={this.handleClose}>
+          <DialogTitle>Super Secret Password</DialogTitle>
+          <DialogContent>
+            <DialogContentText>1-2-3-4-5</DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button color="primary" onClick={this.handleClose}>
+              OK
+            </Button>
+          </DialogActions>
+        </Dialog> */}
+        <Typography variant="h4" gutterBottom>
+          Egyption Rat Screw - Slap Jack - The Card Game
+        </Typography>
+        <Typography gutterBottom>
+          <Link href="/about">
+            <a>Go to the about page</a>
+          </Link>
+        </Typography>
+        <Button variant="contained" color="primary" onClick={this.handleClick}>
+          Super Secret Password
+        </Button>
       </div>
-    </div>
-    <style jsx>{`
+    );
+  }
+}
 
-    .buttonFrame{
-      width: 200px;
-      height: 50px;
-      background-color:#908987;
-      margin: 20px auto;
-      padding-top:20px;
-    }
+Index.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
-    .centered {
-      margin: 10vh;
-    }
-
-    .indexLoginContainer {
-      min-height: 580px;
-      width: 400px;
-      background-color:#eee;
-      padding-top:25px;
-      margin: auto;
-    }
-
-    `}</style>
-  </Page>
-)
+export default withStyles(styles)(Index);
