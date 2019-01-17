@@ -56,9 +56,6 @@ class Index extends React.Component {
         <Typography variant="h4" gutterBottom>
           Material-UI
         </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          example project
-        </Typography>
         <Typography gutterBottom>
           <Link href="/about">
             <a>Go to the about page</a>
